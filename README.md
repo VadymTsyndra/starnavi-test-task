@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+The project is a web application created using the React library. The application allows the user to select a game mode, and then displays a game board where the mouse cursor can be hovered over cells. On hovering over a cell, the application displays row and column information of that cell.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The following components are used in the project:
 
-## Available Scripts
+App: This component represents the main application. It implements the logic of selecting the game mode, displaying the playing field, and displaying messages when hovering over cells.
 
-In the project directory, you can run:
+Select: This component represents the game mode selection form. It displays a drop-down list with available modes and a "START" button to start the game.
 
-### `npm start`
+Field: This component displays the playing field. It creates squares representing cells and tracks mouse hovering over them.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+HoverSquares: This component displays messages that appear when you hover over the cells of the playing field. The messages disappear after a period of time.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The useState is used to handle data about game modes, selected cells, and messages. The useEffect component is used to retrieve the list of game modes from a remote server when the application is launched.
 
-### `npm test`
+To run the project, you need to follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make sure you have Node.js and npm (or yarn) installed.
 
-### `npm run build`
+In the root folder of your project, run the npm install (or yarn install) command to install all project dependencies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start the project using the npm start (or yarn start) command.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Open a browser and go to http://localhost:3000 to start using the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The project also uses TypeScript for stricter typing of data and components.
