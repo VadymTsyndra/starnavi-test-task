@@ -1,10 +1,10 @@
 import React from "react";
-import { Mode } from "../interfaces/ModeInterface";
+import { IMode } from "../interfaces/ModeInterface";
 
 type Props = {
   selectValue: string;
   setSelectValue: React.Dispatch<React.SetStateAction<string>>;
-  modes: Mode[];
+  modes: IMode[];
   handleSelectMode: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 

@@ -5,18 +5,21 @@ import { Select } from "./components/Select";
 import { Field } from "./components/Field";
 import { HoverSquares } from "./components/HoverSquares";
   
-import { Mode } from "./interfaces/ModeInterface";
-import { Message } from "./interfaces/MessageInterface";
-
-
+import { IMode } from "./interfaces/ModeInterface";
+import { IMessage } from "./interfaces/MessageInterface";
 
 const App: React.FC = () => {
   const [selectValue, setSelectValue] = useState<string>('Pick mode');
-  const [modes, setModes] = useState<Mode[]>([]);
+  const [modes, setModes] = useState<IMode[]>([]);
   const [markedCells, setMarkedCells] = useState<string[]>([]);
-  const [selectedModeConfig, setSelectedModeConfig] = useState<Mode | null>(null);
+  const [selectedModeConfig, setSelectedModeConfig] = useState<IMode | null>(null);
   const [sizeOfField, setSizeOfField] = useState<number>(0);
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<IMessage[]>([]);
+
+  const smallCellSize = 8;
+  const bigCellSize = 50;
+  const widthOfBorders = 2;
+  const hardModeField = 15;
 
   const handleSelectMode = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -25,9 +28,9 @@ const App: React.FC = () => {
 
     if (!currentModeConfig) return;
 
-    const sizeOfCurrentField = currentModeConfig.field > 15
-      ? currentModeConfig.field * 8 + 2
-      : currentModeConfig.field * 50 + 2;
+    const sizeOfCurrentField = currentModeConfig.field > hardModeField
+      ? currentModeConfig.field * smallCellSize + widthOfBorders
+      : currentModeConfig.field * bigCellSize + widthOfBorders;
 
     setSizeOfField(sizeOfCurrentField);
     setSelectedModeConfig(currentModeConfig || null);

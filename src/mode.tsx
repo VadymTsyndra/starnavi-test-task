@@ -1,6 +1,6 @@
-import { Mode } from "./interfaces/ModeInterface";
+import { IMode } from "./interfaces/ModeInterface";
 
-export function getModes(): Promise<Mode[]> {
+export function getModes(): Promise<IMode[]> {
   return fetch('https://60816d9073292b0017cdd833.mockapi.io/modes')
     .then((response) => {
       if (!response.ok) {
@@ -9,5 +9,5 @@ export function getModes(): Promise<Mode[]> {
 
       return response.json();
     })
-    .then((data: Mode[]) => data);
+    .then((data: IMode[]) => data);
 }

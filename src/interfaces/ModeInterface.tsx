@@ -1,4 +1,4 @@
-export interface Mode {
+export interface IMode {
   id: number;
   name: string;
   field: number;

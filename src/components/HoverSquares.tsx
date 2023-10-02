@@ -1,8 +1,8 @@
 import React from "react";
-import { Message } from "../interfaces/MessageInterface";
+import { IMessage } from "../interfaces/MessageInterface";
 
 type Props = {
-  messages: Message[];
+  messages: IMessage[];
 }
 
 export const HoverSquares: React.FC<Props> = ({ messages }) => {
