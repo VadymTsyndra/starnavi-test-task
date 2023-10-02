@@ -14,7 +14,9 @@ export const Field: React.FC<Props> = ({
   markedCells,
   handleMouseEnter
 }) => {
-  const customizedField = selectedModeConfig && Array.from({ length: selectedModeConfig.field * selectedModeConfig.field }, (_, index) => {
+  const customizedField = selectedModeConfig && Array.from({
+    length: selectedModeConfig.field * selectedModeConfig.field
+  }, (_, index) => {
     const cellNumber = String(index + 1);
     const isCellMarked = markedCells.includes(cellNumber);
     const cellStyle = isCellMarked ? 'rgb(67, 181, 219)' : 'white';
